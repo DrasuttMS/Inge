@@ -1,0 +1,24 @@
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilos.css') }}">
+    <title>Ejercicio 1</title>
+</head>
+<div>
+<form method="post">
+    <h3>Formulario de Notas</h3>
+    <label>Nota 1:</label><br>
+    <input type="number" name="nota1" min="10" max="70" required><br>
+    <label>Nota 2:</label><br>
+    <input type="number" name="nota2" min="10" max="70" required><br>
+    <label>Nota 3:</label><br>
+    <input type="number" name="nota3" min="10" max="70" required><br>
+    <label>Asistencia (%):</label><br>
+    <input type="number" name="asistencia" min="0" max="100" required><br>
+    <button class="ejercicio" type="submit">Enviar</button>
+    <a href="/">Volver</a>
+</form>
+</div>
+{% if resultado %}
+    <p>Promedio: {{ resultado.promedio }}</p>
+    <p>Estado: {{ resultado.estado }}</p>
+{% endif %}
+
