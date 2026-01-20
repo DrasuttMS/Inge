@@ -1,0 +1,24 @@
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilos.css') }}">
+    <title>Ejercicio 2</title>
+</head>
+<div>
+<form method="POST">
+    <h3>Palabra de mayor caracteres</h3>
+    <label>Nombre 1:</label><br>
+    <input type="text" name="nombre1" required><br>
+    <label>Nombre 2:</label><br>
+    <input type="text" name="nombre2" required><br>
+    <label>Nombre 3:</label><br>
+    <input type="text" name="nombre3" required><br>
+    <button class="ejercicio"  type="submit" >Enviar</button>
+    <a href="/">Volver</a>
+</form>
+</div>
+
+{% if resultado %}
+    <div>
+        <p>El nombre con mayor cantidad de caracteres es: {{ resultado.nombre }}</p>
+        <p>El nombre tiene: {{ resultado.cantidad }} caracteres.</p>
+    </div>
+{% endif %}
